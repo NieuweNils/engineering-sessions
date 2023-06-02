@@ -1,4 +1,4 @@
-# Hello World in IntelliJ
+# Intro to Java for Junior Engineers at Eneco
 
 # To run in IntelliJ
 - register the module 'Fundamentals' in IntelliJ with /src/main/java as source folder
