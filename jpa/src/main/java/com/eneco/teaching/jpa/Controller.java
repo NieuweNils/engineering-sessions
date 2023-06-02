@@ -1,7 +1,7 @@
-package com.eneco.teaching.mvc;
+package com.eneco.teaching.jpa;
 
-import com.eneco.teaching.mvc.model.Customer;
-import com.eneco.teaching.mvc.repository.CustomerRepository;
+import com.eneco.teaching.jpa.model.Customer;
+import com.eneco.teaching.jpa.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

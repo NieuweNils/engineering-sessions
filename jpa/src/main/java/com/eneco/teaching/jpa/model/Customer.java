@@ -1,4 +1,4 @@
-package com.eneco.teaching.mvc.model;
+package com.eneco.teaching.jpa.model;
 
 import lombok.Data;
 
