@@ -5,3 +5,5 @@ Order of the scripts:
 2. `bash 02_compiling_package.sh`
 3. `bash 03_compiling_with_maven.sh`
 4. `bash 04_packaging_with_maven.sh`
+
+mvn tutorial: https://maven.apache.org/guides/getting-started/index.html
