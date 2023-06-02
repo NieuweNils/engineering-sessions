@@ -1,7 +1,7 @@
 # Intro to Java for Junior Engineers at Eneco
 
 # To run in IntelliJ
-- register the module 'Fundamentals' in IntelliJ with /src/main/java as source folder
+- register the module (for example, 'compiling') in IntelliJ with its /src/main/java as a source folder
 - register the module in the settings menu at: Project Structure -> Project Settings -> Modules
 - run in IntelliJ
 
