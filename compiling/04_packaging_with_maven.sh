@@ -5,7 +5,7 @@ echo ">> mvn package"
 echo ""
 mvn package
 echo ""
-echo ">> java -cp ./target/fundamentals-0.0.0.jar com.eneco.teaching.compiling.HelloWorld"
+echo ">> java -cp ./target/compiling-0.0.0.jar com.eneco.teaching.compiling.HelloWorld"
 echo ""
 java -cp ./target/compiling-0.0.0.jar com.eneco.teaching.compiling.HelloWorld
 echo ""
