@@ -2,8 +2,11 @@
 
 # To run in IntelliJ
 - register the module (for example, 'compiling') in IntelliJ with its /src/main/java as a source folder
-- register the module in the settings menu at: Project Structure -> Project Settings -> Modules
+- register the module in the settings menu at: File -> Project Structure -> Project Settings -> Modules
 - run in IntelliJ
+
+Troubleshooting "specify output path":
+- File -> Project Structure -> Project Settings -> Compiler Output : /path/to/project/root/out
 
 # Order of the tutorials
 1. compiling

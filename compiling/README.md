@@ -7,3 +7,4 @@ Order of the scripts:
 4. `bash 04_packaging_with_maven.sh`
 
 mvn tutorial: https://maven.apache.org/guides/getting-started/index.html
+mvn repository: https://mvnrepository.com/artifact

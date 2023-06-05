@@ -7,7 +7,6 @@ public class Dog extends Animal implements Pet {
         super(name, age, owner);
     }
 
-    @Override
     public String responseToChildren() {
         return "licks face";
     }

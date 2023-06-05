@@ -8,6 +8,10 @@ public class StreetCat extends Cat implements Pet{
     }
 
     @Override
+    public String doNothing() {
+        return "I DON'T TAKE COMMANDS! chchchchchchchch";
+    }
+
     public String responseToChildren() {
         return "chchchchch, *scratch*";
     }

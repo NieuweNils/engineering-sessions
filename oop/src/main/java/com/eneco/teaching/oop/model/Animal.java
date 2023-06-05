@@ -10,4 +10,14 @@ public class Animal {
         this.age = age;
         this.owner = owner;
     }
+
+    public String doNothing() {
+        doNothing(this.name);
+        return "";
+    }
+
+    private void doNothing(String name) {
+        String response = "even though " + name + " is given, this method returns nothing";
+    }
 }
+

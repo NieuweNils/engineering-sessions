@@ -12,9 +12,12 @@ public class CatCalling {
 
         Dog bobby = new Dog("bobby", 35, dana);
         System.out.println("bobby.responseToChildren(): " + bobby.responseToChildren());
+        System.out.println("bobby.doNothing(): " + bobby.doNothing());
 
         Animal tsvichko = new StreetCat("tsvichko", 2, dana);
         System.out.println("tsvichko.responseToChildren(): " + ((StreetCat) tsvichko).responseToChildren());
+        System.out.println("tsvichko.responseToChildren(): " + ((Pet) tsvichko).responseToChildren());
+        System.out.println("tsvichko.doNothing(): " + tsvichko.doNothing());
 
         Person aang = new Person("aang", 112);
         WingedLemur momo = new WingedLemur("momo", 110, aang);

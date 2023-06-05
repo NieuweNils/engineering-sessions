@@ -19,6 +19,7 @@ public class DataTypes {
 
         // for float use 'f' as suffix as standard
         float floatVar = 4.7333434f;
+
         // this is mega big
         long longVar = 12121;
         char charVar = 'a';
