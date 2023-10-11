@@ -1,6 +1,6 @@
 # Tutorials and Introductions
 
-The purpose of this repository is to bundle all tutorials and introductions I have given to (junior) engineers.
+The purpose of this repository is to bundle tutorials and introductory sessions for (junior) engineers.
 
 This repo was started during my time as a Data Engineer at Eneco in 2023.
 
