@@ -1,8 +1,6 @@
 #!/bin/bash
 # Setup, don't output to console:
-chmod 000 cant_read_this.txt
 chmod 644 lorem_ipsum.txt
-chmod 000 possibly_dangerous.exe
 
 # Input/Output
 echo "-----2-----Input/Output-----2-----"

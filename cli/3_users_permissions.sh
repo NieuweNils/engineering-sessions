@@ -1,4 +1,8 @@
 #!/bin/bash
+# Setup, don't output to console:
+chmod 000 cant_read_this.txt
+chmod 000 possibly_dangerous.exe
+
 # permissions & users
 echo "-----3-----permissions & users-----3-----"
 echo ""
@@ -6,7 +10,7 @@ echo "ls's option -l (long format) shows extra info besides the filename, such a
 echo "> ls -l"
 ls -l
 echo ""
-echo "we no permissions, so can't read the file:"
+echo "when we do not have read permission, we can't read a file:"
 echo "> cat cant_read_this.txt"
 cat cant_read_this.txt
 echo ""
@@ -27,13 +31,14 @@ echo "> echo \"You can!\" >> cant_read_this.txt"
 echo "You can!" >> cant_read_this.txt
 echo ""
 echo "file – checks a file’s type."
+echo "> file cant_read_this.txt"
 file cant_read_this.txt
 echo ""
 echo "---------"
 echo "now try: "
 echo "---------"
 echo "- modifying the file's permission to allow write access, and writing to it"
-echo "- checking out what is up with possibly_dangerous.exe and running it (if you want to.. but do you?!)"
+echo "- checking out what is up with \"possibly_dangerous.exe\" and running it (if you want to.. but do you?!)"
 echo "- figuring out what these commands do:"
 echo "  - useradd"
 echo "  - userdel"
