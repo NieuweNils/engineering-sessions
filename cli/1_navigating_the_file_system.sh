@@ -79,6 +79,7 @@ echo "  - less"
 echo "  - more"
 echo "  - head"
 echo "  - tail (check out +1f, and remember what Ctrl+C does)"
+echo "  - source"
 echo ""
 echo "If you want new binaries, try finding them with brew/apt-get!"
 
