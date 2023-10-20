@@ -1,7 +1,7 @@
 ## Recap: Object oriented programmin in Python
 Checkout the code in `/recap`
 
-- Change the class `Eneco` to easily be able to create Eneco with given list of Customers, Employees, and WindTurbine
+- Change the class `Eneco` to easily be able to create Eneco with given list of Customers, Employees, and WindTurbines
 - Change the string representation of Eneco to print statistics on the amount of Customers, Employees, and WindTurbine Eneco has
 - Create an instance of Eneco that contains 20 Employees, 100 WindTurbine, and 3000 Customers and print these statistics
 - Alter the `Employee` class such that a new Employee always has a default start_date of today.
