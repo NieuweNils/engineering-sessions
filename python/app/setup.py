@@ -30,7 +30,6 @@ setup(
     description=about["__summary__"],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=about["__uri__"],
 
     author=about["__author__"],
     author_email=about["__email__"],
