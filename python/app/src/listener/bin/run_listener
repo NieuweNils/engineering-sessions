@@ -1,8 +1,10 @@
-import listener
+#!/usr/bin/env python
+
+from listener.processing import processor
 
 
 def run_listener():
-    listener.run()
+    processor.run()
 
 
 if __name__ == "__main__":
