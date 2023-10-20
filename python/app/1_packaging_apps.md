@@ -9,3 +9,5 @@
 ### install project:
 `pip install .`
 
+### check out documentation:
+https://setuptools.pypa.io/en/latest/userguide/index.html
