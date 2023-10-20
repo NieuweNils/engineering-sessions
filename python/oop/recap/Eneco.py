@@ -1,6 +1,6 @@
 from Customer import Customer
 from Employee import Employee
-from python.oop.dataclass.WindTurbine import WindTurbine
+from WindTurbine import WindTurbine
 
 
 class Eneco:
