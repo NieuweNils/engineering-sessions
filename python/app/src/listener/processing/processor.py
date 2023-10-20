@@ -34,5 +34,5 @@ async def process_messages(num_consumers: int, num_messages: int) -> None:
     await asyncio.gather(*tasks, return_exceptions=True)
 
 
-async def run():
+def run():
     asyncio.run(process_messages(num_consumers=3, num_messages=20))
