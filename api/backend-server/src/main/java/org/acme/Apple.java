@@ -1,3 +1,3 @@
 package org.acme;
 
-record Apple(int seeds, double circumference){}
+public record Apple(int seeds, double circumference){}

@@ -31,7 +31,9 @@ public class GreetingResource {
     @Path("/apple/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Uni<Apple> getApple(@PathParam("id") Integer id){
-        return appleRepository.findApple(id);
+        return appleRepository.findApple(id)
+                .onItem().ifNull()
+                .failWith(new NotFoundException("Could not find apple with id " + id));
     }
 
     @ServerExceptionMapper

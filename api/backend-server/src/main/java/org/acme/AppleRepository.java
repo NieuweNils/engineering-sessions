@@ -2,15 +2,18 @@ package org.acme;
 
 import io.quarkus.runtime.StartupEvent;
 import io.smallrye.mutiny.Uni;
+import io.vertx.mutiny.sqlclient.Row;
+import io.vertx.mutiny.sqlclient.RowSet;
 import io.vertx.mutiny.sqlclient.Tuple;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 
 @Slf4j
+@ApplicationScoped
 public class AppleRepository {
     @Inject
     io.vertx.mutiny.pgclient.PgPool client;
@@ -33,24 +36,24 @@ public class AppleRepository {
                 .await().indefinitely();
     }
 
+
+
     public Uni<Integer> addApple(Apple apple){
         return client.preparedQuery("INSERT INTO apples (circumference, seeds) VALUES ($1, $2) RETURNING id")
                 .execute(Tuple.of(apple.circumference(), apple.seeds()))
                 .onItem().transform(rows -> rows.iterator().next().getInteger(0));
     }
 
-    public Uni<Apple> findApple(Integer id){
+    public Uni<Apple> findApple(Integer id) {
         return client.preparedQuery("SELECT circumference, seeds from apples where id = $1")
                 .execute(Tuple.of(id))
-                .onItem().transform(rows -> {
-                    if (rows.iterator().hasNext()) {
-                        var row = rows.iterator().next();
-                        return new Apple(row.getInteger("seeds"), row.getDouble("circumference"));
-                    } else {
-                        log.warn("not able to find apple, returning 404");
-                        throw new NotFoundException("The apple with id "+id+" cannot be found");
-                    }
-                });
+                .onItem().transform(RowSet::iterator)
+                .onItem().transform(iterator -> iterator.hasNext() ? from(iterator.next()) : null);
+
+    }
+
+    private static Apple from(Row row) {
+        return new Apple(row.getInteger("seeds"), row.getDouble("circumference"));
     }
 
 }
