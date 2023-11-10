@@ -36,6 +36,26 @@ public class GreetingResource {
                 .failWith(new NotFoundException("Could not find apple with id " + id));
     }
 
+    @POST
+    @Path("/apple/update/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Uni<Apple> updateApple(@PathParam("id") Integer id, Apple apple){
+        return appleRepository.updateApple(id, apple)
+                .onItem().ifNull()
+                .failWith(new NotFoundException("Could not find apple with id " + id));
+    }
+
+    @DELETE
+    @Path("/apple/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Uni<RestResponse> deleteApple(@PathParam("id") Integer id){
+        return appleRepository.deleteApple(id)
+                .onItem().ifNull()
+                .failWith(new NotFoundException("Could not find apple with id " + id))
+                .onItem().transform(aBoolean -> RestResponse.status(Response.Status.ACCEPTED));
+    }
+
     @ServerExceptionMapper
     public RestResponse<String> mapException(NotFoundException x) {
         return RestResponse.status(Response.Status.NOT_FOUND,  x.getMessage());

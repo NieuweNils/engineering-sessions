@@ -52,6 +52,20 @@ public class AppleRepository {
 
     }
 
+    public Uni<Apple> updateApple(Integer id, Apple apple) {
+        return client.preparedQuery("UPDATE apples SET circumference=$1, seeds=$2 where id = $3 RETURNING seeds, circumference")
+                .execute(Tuple.of(apple.circumference(), apple.seeds(), id))
+                .onItem().transform(RowSet::iterator)
+                .onItem().transform(iterator -> iterator.hasNext() ? from(iterator.next()) : null);
+    }
+
+    public Uni<Boolean> deleteApple(Integer id) {
+        return client.preparedQuery("DELETE FROM apple WHERE id = $1 RETURNING 1")
+                .execute(Tuple.of(id))
+                .onItem().transform(RowSet::iterator)
+                .onItem().transform(iterator -> iterator.hasNext() ? true : null);
+    }
+
     private static Apple from(Row row) {
         return new Apple(row.getInteger("seeds"), row.getDouble("circumference"));
     }
