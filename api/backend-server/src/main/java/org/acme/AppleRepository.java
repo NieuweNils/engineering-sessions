@@ -60,7 +60,7 @@ public class AppleRepository {
     }
 
     public Uni<Boolean> deleteApple(Integer id) {
-        return client.preparedQuery("DELETE FROM apple WHERE id = $1 RETURNING 1")
+        return client.preparedQuery("DELETE FROM apples WHERE id = $1 RETURNING 1")
                 .execute(Tuple.of(id))
                 .onItem().transform(RowSet::iterator)
                 .onItem().transform(iterator -> iterator.hasNext() ? true : null);
