@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: ApplesAPI
+  description: ApplesAPI
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080/v1'
+paths:
+  /hello:
+    get:
+      operationId: SimpleResponse
+      summary: The simplest request response where we simply get a string back
+      responses:
+        '200':
+          description: '200 response with hello from server'
+          content:
+            text/plain:
+              schema:
+                type: string
+
+  /apple/{id}:
+    get:
+      summary: Get the apple that corresponds to the provided id
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Numeric identifier for the apple to be returned by the endpoint
+      responses:
+        '200':
+          description: '200 response with the apple object corersponding to the provided id'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apple'
+        '404':
+          description: '404 response that tells user that the provided ID does not correspond to an apple in the system'
+          content:
+            plain/text:
+              schema:
+                type: string
+
+components:
+  schemas:
+    apple:
+      type: object
+      properties:
+        seeds:
+          type: integer
+        circumference:
+          type: number
+
+
+  

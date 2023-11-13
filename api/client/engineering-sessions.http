@@ -1,0 +1,34 @@
+# engineering-sessions
+
+###
+# @name Hello
+GET http://localhost:8080/v1/hello
+
+###
+# @name apple
+GET http://localhost:8080/v1/apple/1
+
+
+###
+# @name new Apple
+POST http://localhost:8080/v1/apple
+Content-Type: application/json
+
+{
+  "seeds": 12,
+  "circumference": 123.1223452356
+}
+
+###
+# @name update Apple
+POST http://localhost:8080/v1/apple/update/2
+Content-Type: application/json
+
+{
+  "seeds": 300,
+  "circumference": 42.0
+}
+
+###
+# @name Delete apple
+DELETE http://localhost:8080/v1/apple/1
