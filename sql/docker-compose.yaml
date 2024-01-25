@@ -1,0 +1,26 @@
+version: '2.4'
+services:
+  plato-db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - pgdata:/var/lib/postgresql/data:rw
+      - ./scripts/plato/init_db.sql:/docker-entrypoint-initdb.d/01-init_db.sql:ro
+      - ./scripts/plato/init_data.sql:/tmp/init_pl_data.sql:ro
+    healthcheck:
+      test: [ 'CMD-SHELL', 'pg_isready -U postgres' ]
+      start_period: 5s
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    mem_limit: 2g
+    ports:
+      - 5432:5432
+
+volumes:
+  pgdata:
+    driver: local
