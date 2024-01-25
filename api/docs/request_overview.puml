@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Client -> API: Request information on an apple with id 3
+API -> BackendDB as "Backend Database": Query the apples table where id=3
+BackendDB -> API: Return information on the apple with id=3
+API -> Client: Return information to client on apple with id=3
+
+
+@enduml

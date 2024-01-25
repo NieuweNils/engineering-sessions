@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+package "Actual situation in production" {
+  node DatabaseVM as "Database VM"{
+    database "postgres database"{
+        [apples table]
+    }
+  }
+  node APIVM as "API VM or kubernetes"{
+        [Java Quarkus API]
+  }
+
+  node CLIENT as "client at home"  {
+       [Computer or phone or whatever]
+  }
+
+}
+
+package "local" {
+  node localhost as "Local computer with applications listening and sending data to ports"{
+    node DockerContainer {
+        database "local postgres database"{
+            [local apples table]
+        }
+    }
+    [postman or python or curl to do request]
+    [local Java Quarkus API]
+  }
+}
+
+"Actual situation in production" -[hidden]-> "local"
+
+[Computer or phone or whatever] -> [Java Quarkus API]
+[Java Quarkus API] -> [apples table]
+
+[postman or python or curl to do request] -> [local Java Quarkus API]
+[local Java Quarkus API] -> [local apples table]
+
+
+@enduml
