@@ -1,0 +1,7 @@
+%syntax-version=1.0.0
+%project=plato
+
+artists 2024-01-24T15:08:26Z nils.nieuwenkamp <nils.nieuwenkamp@eneco.com> # Create artist table
+albums 2024-01-24T15:46:53Z nils.nieuwenkamp <nils.nieuwenkamp@eneco.com> # Create albums table
+customers 2024-01-24T15:58:55Z nils.nieuwenkamp <nils.nieuwenkamp@eneco.com> # Create customer table
+transactions 2024-01-24T16:00:36Z nils.nieuwenkamp <nils.nieuwenkamp@eneco.com> # Create transactions table
