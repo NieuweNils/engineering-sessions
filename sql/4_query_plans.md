@@ -1,7 +1,7 @@
 ## let's talk about this stuff:
 ```
 EXPLAIN  WITH albums_ordered_by_price AS (  
-SSELECT
+SELECT
 artist_id,
 ROW_NUMBER() OVER (ORDER BY price ASC) AS price_order,
 RANK() OVER (ORDER BY price ASC)       AS rank,
