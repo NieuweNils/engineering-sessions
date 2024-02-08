@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-init-script
+data:
+  01_init_db.sql: |
+    \connect grocer
+        
+    CREATE TABLE IF NOT EXISTS apples (
+        id SERIAL PRIMARY KEY,
+        circumference FLOAT NOT NULL,
+        weight FLOAT NOT NULL
+    );

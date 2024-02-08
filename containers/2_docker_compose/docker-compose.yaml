@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  flask-app:
+#    build: .
+    image: backend-api:docker-engineering-session
+    ports:
+      - "1234:5000"
+    environment:
+      STUFF: "is_usefull"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: 'grocer'
+      POSTGRES_USER: 'DonQuijote'
+      POSTGRES_PASSWORD: 'AJungleOfVolume!'
+    volumes:
+      - pgdata:/var/lib/postgresql/data:rw
+      - ./db/init_db.sql:/docker-entrypoint-initdb.d/01-init_db.sql:ro
+    ports:
+      - "5432:5432"
+volumes:
+  pgdata:
+    driver: local

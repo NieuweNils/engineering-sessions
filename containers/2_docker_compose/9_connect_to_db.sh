@@ -1,0 +1,1 @@
+docker-compose exec -it db psql -d grocer -U DonQuijote

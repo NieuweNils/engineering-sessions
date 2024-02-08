@@ -1,0 +1,1 @@
+kubectl exec -it deployment/postgres-deployment -- psql -d grocer -U DonQuijote
