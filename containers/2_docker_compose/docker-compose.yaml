@@ -2,8 +2,7 @@ version: '3'
 
 services:
   flask-app:
-#    build: .
-    image: backend-api:docker-engineering-session
+    build: .
     ports:
       - "1234:5000"
     environment:
