@@ -17,7 +17,7 @@ src_dir = base_dir / "src"
 sys.path.insert(0, str(src_dir))
 
 about = {}
-with open(str(src_dir / "__about__.py")) as f:
+with open(str(src_dir / "example" / "__about__.py")) as f:
     exec(f.read(), about)
 
 with open("README.md", "r") as fh:
