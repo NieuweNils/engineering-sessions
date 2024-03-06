@@ -7,7 +7,7 @@ __all__ = [
 
 __title__ = "engineering-session-packaging"
 __summary__ = "test project to illustrate some python packaging"
-__uri__ = "https://github.com/NieuweNils/engineering-sessions/tree/main/python/app"
+__uri__ = "https://github.com/NieuweNils/engineering-sessions/tree/main/python_packaging/2_setuptools"
 
 __version__ = "0.0.1"
 
