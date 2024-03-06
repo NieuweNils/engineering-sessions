@@ -1,0 +1,4 @@
+uwsgi==2.0.*
+
+[test]
+pytest

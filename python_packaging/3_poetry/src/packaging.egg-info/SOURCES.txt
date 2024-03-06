@@ -1,0 +1,16 @@
+README.md
+setup.py
+src/example/__init__.py
+src/example/app.py
+src/example/util.py
+src/example/bin/__init__.py
+src/example/bin/run_app
+src/example/submodule/__init__.py
+src/example/submodule/util.py
+src/example/submodule/subsubmodule/__init__.py
+src/example/submodule/subsubmodule/util.py
+src/packaging.egg-info/PKG-INFO
+src/packaging.egg-info/SOURCES.txt
+src/packaging.egg-info/dependency_links.txt
+src/packaging.egg-info/requires.txt
+src/packaging.egg-info/top_level.txt
