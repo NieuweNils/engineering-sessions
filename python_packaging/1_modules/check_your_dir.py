@@ -1,12 +1,14 @@
 import mod
-import mod.submodule as submodule
-import mod.submodule.subsubmodule as subsubmodule
+import mod.package as package
+import mod.package.subpackage as subpackage
 
 print("> dir()")
 print(dir())
 print("> dir(mod)")
 print(dir(mod))
-print("> dir(submodule)")
-print(dir(submodule))
-print("> dir(subsubmodule)")
-print(dir(subsubmodule))
+print("> dir(package)")
+print(dir(package))
+print("> dir(subpackage)")
+print(dir(subpackage))
+print("> dir(subpackage.util)")
+print(dir(subpackage.util))

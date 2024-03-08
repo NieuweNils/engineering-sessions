@@ -1,6 +1,6 @@
 from util import location, list_of_vals, print_argument, Cats
-from submodule.util import Dogs
-from submodule import Spider
+from package.util import Dogs
+from package import Spider
 
 if __name__ == "__main__":
     print(location)

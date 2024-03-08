@@ -15,11 +15,11 @@ echo ""
 echo "> python -m mod"
 python -m mod
 echo ""
-echo "> python -m mod.submodule"
-python -m mod.submodule
+echo "> python -m mod.package"
+python -m mod.package
 echo ""
-echo "> python -m mod.submodule.subsubmodule"
-python -m mod.submodule.subsubmodule
+echo "> python -m mod.package.subpackage"
+python -m mod.package.subpackage
 echo ""
 echo "> python check_your_dir.py"
 python check_your_dir.py

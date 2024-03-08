@@ -9,7 +9,7 @@ __title__ = "engineering-session-packaging"
 __summary__ = "test project to illustrate some python packaging"
 __uri__ = "https://github.com/NieuweNils/engineering-sessions/tree/main/python_packaging/2_setuptools"
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 __author__ = "NieuweNils"
 __email__ = "noneofyour@business.com"

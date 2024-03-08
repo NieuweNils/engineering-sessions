@@ -1,4 +1,4 @@
-location = "I am in the same module as main.py"
+location = "I am in the same package as main.py"
 list_of_vals = [100, 101, 102]
 
 

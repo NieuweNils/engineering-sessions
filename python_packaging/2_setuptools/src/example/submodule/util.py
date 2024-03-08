@@ -1,9 +1,9 @@
-location = "I am in the submodule package"
+location = "I am in package"
 list_of_vals = [200, 201, 202]
 
 
 def print_argument(arg):
-    print(f'submodule arg = {arg}')
+    print(f'package arg = {arg}')
 
 
 class Dogs:

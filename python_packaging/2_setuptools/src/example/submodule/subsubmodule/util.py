@@ -1,9 +1,9 @@
-location = "I am in the subsubmodule package"
+location = "I am in the subpackage package"
 list_of_vals = [300, 301, 302]
 
 
 def print_argument(arg):
-    print(f'subsubmodule arg = {arg}')
+    print(f'subpackage arg = {arg}')
 
 
 class Spider:

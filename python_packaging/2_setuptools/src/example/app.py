@@ -1,6 +1,6 @@
 from example.util import location, list_of_vals, print_argument, Cats
-from example.submodule.util import Dogs
-from example.submodule import Spider
+from example.package.util import Dogs
+from example.package import Spider
 
 
 def main():
