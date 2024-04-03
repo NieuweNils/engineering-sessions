@@ -4,6 +4,10 @@
 # Log file
 *.log
 
+# take out stuff from azure repositories (used for airflow example)
+airflow/.git
+airflow/azure-pipelines.yaml
+
 # BlueJ files
 *.ctxt
 
