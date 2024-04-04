@@ -32,3 +32,8 @@ replay_pid*
 /target
 */.idea
 */target
+
+# python files
+*/__pycache__/*
+*.egg-info/*
+*.whl
