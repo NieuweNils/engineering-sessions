@@ -43,7 +43,7 @@ default_arguments = {
     ],
     "email_on_failure": env == "prd",
     "email_on_retry": False,
-    "retries": 2,
+    "retries": 0,
     "retry_delay": timedelta(minutes=5),
     "start_date": datetime(2024, 4, 4),
     "on_failure_callback": send_slack_alert if env in ["test", "acc", "prod"] else None,
@@ -52,9 +52,10 @@ default_arguments = {
 
 
 def print_message():
-    raise AirflowException
+    print(f"you are in in env: {env}")
+    raise AirflowException("If you raise an airflowexception, this will get logged and the task will be set to failed")
     # ah-oh: this never returns :(
-    return "you've made it!"
+    return "this will never happen!"
 
 
 with DAG(
